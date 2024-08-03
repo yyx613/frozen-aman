@@ -86,7 +86,7 @@ export const DriverInfoInputScreen: FC<DriverInfoInputProps> = observer(
     }
 
     async function handleSubmit() {
-      if (tripStore.selectedKelindan === null || tripStore.selectedLorry === null) {
+      if (tripStore.selectedLorry === null) {
         return Alert.alert("Please select all required filed.")
       }
       await tripStore.startTrip()

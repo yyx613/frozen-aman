@@ -118,6 +118,8 @@ export function Receipt(props: ReceiptProps) {
               <Text text={item.value} style={$summaryDetail} />
             </View>
           ))}
+          <View style={$divider} />
+          <View style={$divider} />
         </View>
       </ViewShot>
       <View style={{ height: 200 }} />

@@ -52,6 +52,18 @@ export const PAYMENT_METHOD: PaymentMethodProps[] = [
     methodName: 'Credit',
     icon: 'creditNote'
   },
+  {
+    id: '3',
+    value: 3,
+    methodName: 'BankIn',
+    icon: 'bank'
+  },
+  {
+    id: '4',
+    value: 4,
+    methodName: 'TNG',
+    icon: 'cash'
+  }
 ]
 
 const TASK_STATUS = {

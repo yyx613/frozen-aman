@@ -75,7 +75,7 @@ target 'Frozen' do
       config[:reactNativePath],
       # Set `mac_catalyst_enabled` to `true` in order to apply patches
       # necessary for Mac Catalyst builds
-      :mac_catalyst_enabled => false
+      :mac_catalyst_enabled => true
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
     File.delete("./.xcode.env.local") if File.exist?("./.xcode.env.local")

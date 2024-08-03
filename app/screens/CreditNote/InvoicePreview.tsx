@@ -110,7 +110,7 @@ const ItemBox = ({ quantity }) => (
 const $container: ViewStyle = {
   backgroundColor: colors.palette.neutral100,
   borderRadius: 10,
-  paddingHorizontal: 20,
+  paddingHorizontal: 30,
   paddingVertical: 10,
   marginHorizontal: 20,
 }
