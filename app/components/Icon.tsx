@@ -140,6 +140,7 @@ export const iconRegistry = {
   creditNote: require("../../assets/icons/tag.png"),
   payment: require("../../assets/icons/coin.png"),
   logout: require("../../assets/icons/logout.png"),
+  tng: require("../../assets/icons/tng.png"),
 }
 
 const $imageStyle: ImageStyle = {

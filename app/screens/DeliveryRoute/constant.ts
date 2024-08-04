@@ -62,7 +62,7 @@ export const PAYMENT_METHOD: PaymentMethodProps[] = [
     id: '4',
     value: 4,
     methodName: 'TNG',
-    icon: 'cash'
+    icon: 'tng'
   }
 ]
 
