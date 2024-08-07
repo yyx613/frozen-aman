@@ -161,6 +161,7 @@ export const StockStoreModel = types
       console.log('pendingOrders', pendingOrders.toJSON())
 
       if (pendingOrders?.length !== 0) {
+        
         const pendingOrderResponse = yield rootStore.submitPendingOrders()
         console.log('response', pendingOrderResponse)
 

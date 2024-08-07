@@ -112,7 +112,7 @@ export const EndTripSummaryScreen: FC<EndTripSummaryProps> = observer(function E
               </View>
 
               <View style={$section}>
-                <Text text={"Total Prodcut Sold"} weight={"semiBold"} style={$title} />
+                <Text text={"Total Product Sold"} weight={"semiBold"} style={$title} />
                 <Text text={`${dashboardStore.getTotalProductSold()}`} />
               </View>
             </View>

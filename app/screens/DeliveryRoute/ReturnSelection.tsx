@@ -11,7 +11,7 @@ import { useStores } from "../../models"
 
 const IceCubeImage = require("../../../assets/images/bread.png")
 
-interface ReturnSelectionProps extends AppStackScreenProps<"ReturnSelection"> {}
+interface ReturnSelectionProps extends AppStackScreenProps<"ReturnSelection"> { }
 
 export const ReturnSelectionScreen: FC<ReturnSelectionProps> = observer(
   function ReturnSelectionScreen(
@@ -54,9 +54,9 @@ export const ReturnSelectionScreen: FC<ReturnSelectionProps> = observer(
 
     function handleAdd() {
       const { cart, quantity } = selectedProduct
-      // if (cart < quantity) {
+      if (cart < quantity) {
         setSelectedProduct({ ...selectedProduct, cart: cart + 1 })
-      // }
+      }
     }
 
     function handleMinus() {
@@ -130,7 +130,7 @@ export const ReturnSelectionScreen: FC<ReturnSelectionProps> = observer(
             onChangeText={handleProductQuantityChange}
             onConfirm={handleAddToBasket}
             quantity={selectedProduct.cart?.toString()}
-            // remaining={getRemainingStocks()}
+          // remaining={getRemainingStocks()}
           />
         </View>
         <Button

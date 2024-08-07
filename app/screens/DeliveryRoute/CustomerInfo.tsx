@@ -38,6 +38,10 @@ export const CustomerInfoScreen: FC<CustomerInfoProps> = observer(function Custo
 
   function handleNewReturn() {
     orderStore.updateSelectedTask(task)
+    if (task.invoice_id) {
+      orderStore.updateCartWithExistingInvoice(task.invoice.invoicedetail)
+      return navigation.push("OrderConfirmation")
+    }
     orderStore.reset()
     navigation.push("ReturnSelection")
   }

@@ -277,6 +277,7 @@ export const OrderStoreModel = types
 
         const returnStocks = flow(function* returnStocks({ remark, paymentType, date }) {
             markLoading(true)
+            const rootStore = getParent<typeof RootStoreModel>(self)
             const returnCart = [...formatReturnCartList(self.returnCart)]
 
             // // check if is offline
@@ -301,6 +302,7 @@ export const OrderStoreModel = types
             }
             console.log('returnResponse', response)
             updateReturnReceiptDetails({ returnNo: response.data.returnno, paymentType, remark, date })
+            rootStore.updateTaskList({ id: self.selectedTask.id, status: DELIVERY.COMPLETED_STATUS })
             markLoading(false)
             return response
         })

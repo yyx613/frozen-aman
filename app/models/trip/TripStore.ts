@@ -97,7 +97,7 @@ export const TripStoreModel = types
 
     const startTrip = flow(function* startTrip() {
       markLoading(true)
-      const kelindanId = self.selectedKelindan ? self.selectedKelindan.id : null;
+      const kelindanId = self.selectedKelindan ? self.selectedKelindan.id : 1;
       const response = yield callStartTrip({ kelindan_id: kelindanId, lorry_id: self.selectedLorry.id })
       if (response.kind !== 'ok') {
         console.tron.error(`Error start trip: ${JSON.stringify(response)}`, [])
